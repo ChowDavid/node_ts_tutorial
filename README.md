@@ -4,9 +4,22 @@
 -Plan to remove the pug template.  
 -Later will integreate some more backend component and restful.  
 
-#Start up on two terminal and two watch will monitor the change.
+#Prefer IDE
+Visual Studio 
+
+#Checkout
+git clone https://github.com/ChowDavid/node_ts_tutorial.git my-app
+
+#Quick startup
 <pre>
-npm run build
-npm run dev
+npm install
+npm run start_dev
 </pre>
+
+#Web Broswer
+http://localhost:8080
+
+#Main page
+./src/routes/index.ts
+
 
