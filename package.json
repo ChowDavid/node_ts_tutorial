@@ -5,12 +5,14 @@
   "main": "index.js",
   "scripts": {
     "dev": "NODE_ENV=development nodemon ./bin/www",
-    "grunt": "grunt",
     "start": "node ./bin/www",
-    "copy": "cp -r src/public dist/ && cp -r src/views dist/",
-    "clean": "rm -fr dist/*",
+    "copy_public": "cpx ./src/public/* ./dist/public",
+    "copy_views": "cpx ./src/views/* ./dist/views",
+    "copy": "npm run copy_public && npm run copy_views",
+    "clean": "rimraf ./dist/*",
     "build_server": "tsc src/server.ts --outDir dist",
-    "build": "npm run clean && npm run copy && npm run build_server && tsc -w"
+    "build": "npm run clean && npm run copy && npm run build_server",
+    "start_dev":"npm run build && concurrently 'tsc -w' 'npm run dev'"
   },
   "author": "",
   "license": "ISC",
@@ -29,8 +31,10 @@
     "@types/errorhandler": "0.0.30",
     "@types/method-override": "0.0.29",
     "@types/morgan": "^1.7.32",
+    "concurrently": "^3.1.0",
+    "cpx": "^1.5.0",
     "nodemon": "^1.11.0",
-    "typescript": "^2.1.5",
-    "npm-watch": "^0.1.7"
+    "rimraf": "^2.5.4",
+    "typescript": "^2.1.5"
   }
 }
