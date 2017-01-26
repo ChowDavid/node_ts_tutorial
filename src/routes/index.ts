@@ -51,7 +51,7 @@ export class IndexRoute extends BaseRoute {
 
     //set options
     let options: Object = {
-      "message": "Welcome to the Tour of Heros "+new Date().toString()
+      "message": "Welcome to the Tour of Joyce Green "+new Date().toString()
     };
 
     //render template
