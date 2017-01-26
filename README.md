@@ -8,7 +8,9 @@
 Visual Studio 
 
 #Checkout
+<pre>
 git clone https://github.com/ChowDavid/node_ts_tutorial.git my-app
+</pre>
 
 #Quick startup
 <pre>
@@ -17,7 +19,9 @@ npm run start_dev
 </pre>
 
 #Web Broswer
+<pre>
 http://localhost:8080
+</pre>
 
 #Main page
 ./src/routes/index.ts
